@@ -1,0 +1,134 @@
+/*
+    Theme Name: lp-2023-wp-media
+    Theme URI: 
+    Author: Lionel Prats
+    Author URI: https://www.linkedin.com/in/lionel-prats/
+    Description: Theme diseñado para la la aplicacion lp-2023-wp-media
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: media, news, flexbox, css grid, mobile first
+    Text Domain: WP-Media
+*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&family=Staatliches&display=swap');
+
+/* custom properties */
+:root {
+    /* Fonts */
+    --main-font: 'Raleway', sans-serif;
+    --headings-font: 'Staatliches', cursive;
+    /* Colors */
+    --white: #fff;
+    --light-gray: #cbcbcb;
+    --dark-gray: #020202;
+    --black: #000;
+    --pink-light: #ea669b;
+    --pink-medium: #9c3457;
+    --pink-dark: #6d243d;
+    --turquoise: #3c899e;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--main-font);
+    font-size: 1.8rem;
+    line-height: 2;
+    background-color: var(--light-gray);
+}
+
+/* Headings */
+h1,h2,h3,h4 {
+    margin: 0 0 5rem 0;
+    font-family: var(--headings-font);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4.8rem;
+}
+h3 {
+    font-size: 3.6rem;
+}
+h4 {
+    font-size: 2.4rem;
+}
+
+/* GLobals */
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+hr {
+    border: 1px solid var(--light-gray);
+}
+.imagen-destacada {
+    margin-bottom: 3rem;
+}
+.container {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+/* .contenido-centrado { */
+.center-content {
+    width: min(95%, 80rem);
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    /* color: var(--primary); */
+}
+.text-light {
+    color: var(--white);
+}
+.section {
+    padding: 5rem 0;
+}
+
+/* Header */
+.header {
+    background-color: var(--white);
+}
+.main-navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .main-navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-menu .menu {
+        display: flex;
+        gap: 1rem;
+    }
+}
+.main-menu a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pink-medium);
+}
